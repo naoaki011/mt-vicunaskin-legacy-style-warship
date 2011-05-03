@@ -1,0 +1,343 @@
+@charset "utf-8";
+
+/*
+@prefix : <http://purl.org/net/ns/doas#> .
+<> a :CSSstylesheet;
+ :title "Vicuna Warship Style - Module Hub stylesheet";
+ :created "2007-07-12";
+ :release [:revision "1.1"; :created "2008-01-06"];
+ :author [:name "wu"; :homepage <http://vicuna.jp/>; :mbox "3ping.org@gmail.com"];
+ :license <http://creativecommons.org/licenses/by/3.0/>;
+ :description "表示をカスタマイズするためのモジュール";
+*/
+
+/*======================================
+
+	Eye Catch
+	
+=======================================*/
+/*--------------------------------------
+	Eye Catch [Short] Module  eye-s
+	Eye Catch [Long] Module   eye-d
+	Eye Catch [Header] Module eye-t
+	Eye Catch [Mini] Module   eye-u
+	  eye-tとのみ*/
+/*--------------------------------------
+	5-1.全てのページへ影響
+---------------------------------------*/
+
+body.double.eye-s,
+body.double.eye-d,
+body.eye-t {
+	margin: 0 10px;
+}
+
+body.double.eye-s div#header,
+body.double.eye-s div#content,
+body.double.eye-s div#footer,
+body.double.eye-d div#header,
+body.double.eye-d div#content,
+body.double.eye-d div#footer,
+body.eye-t div#header,
+body.eye-t div#content,
+body.eye-t div#footer {
+	width: 800px;
+}
+
+body.eye-t div#header {
+	padding-top: 115px; /*  挿入画像の高さ */
+	_height: 115px;  /* for IE 挿入画像の高さ */
+	position: relative;
+	background-image: url(images/eyeCatch/header.gif);
+	background-repeat: no-repeat;
+}
+
+/* タイトルの位置 */
+body.eye-t div#header p.siteName {
+	position: absolute;
+	top: 15px;
+	left: 30px;
+}
+
+/* 概要の位置 */
+body.eye-t div#header p.description {
+	position: absolute;
+	top: 55px;
+	left: 30px;
+	color: #999;
+}
+
+body.mainIndex.double.eye-s h1 {
+	display: block!important;
+}
+
+/*--------------------------------------
+	5-2.body.singleへの処理
+---------------------------------------*/
+body.single.eye-d ul#flip1 {
+	position: static;
+}
+
+body.single.eye-d div#main p.topicPath {
+	margin-right: 0;
+}
+/*--------------------------------------
+	5-3.body.doubleへの処理
+---------------------------------------*/
+body.mainIndex.double.eye-s h1 {
+	display: block!important;
+}
+body.double.eye-s div#main h1 {
+	padding-top: 255px;
+	background-image: url(images/eyeCatch/short.gif);
+	background-repeat: no-repeat;
+	margin:0 -20px 10px 0;
+}
+body.double.eye-s.eye-u div#main h1 {
+	margin:0 -20px 10px -25px;
+}
+
+body.double.eye-d div#content {
+	padding-top: 228px;
+	background-image: url(images/eyeCatch/long.gif);
+	background-repeat: no-repeat;
+}
+
+body.double.eye-d div#utilities {
+	margin-top: 245px;
+}
+
+body.double.eye-d div#main {
+	position: relative;
+}
+body.double.eye-u div#content {
+	background-color: transparent;
+	background-image: url(images/eyeCatch/mini.gif);
+	background-repeat: no-repeat;
+}
+
+body.double.eye-u h1 {
+	margin: 0 0 0.5em -5px;
+	_position: relative;
+}
+
+body.double.eye-u div#main p.topicPath {
+	margin-top: 1.7em;
+	margin-left: 5px;
+}
+
+body.double.eye-u div#utilities {
+	margin-top: 289px;
+}
+
+body.double.eye-t.eye-s div#main h1 {
+	padding-top: 198px;
+	overflow:hidden;
+	text-indent:-100em;
+}
+
+body.double.eye-s.eye-u h1 {
+	margin:0 20px 0.5em 0;
+	padding:0.5em 40px 0.6em 40px;
+/*	overflow:hidden;
+	text-indent:-100em;*/
+}
+body.double.eye-s.eye-u div#main h1 {
+	padding-top:185px;
+}
+
+body.double.eye-s.eye-u div#header p.siteName {
+	display:none;
+}
+body.double.eye-t.eye-s.eye-u div#header p.siteName {
+	display:block;
+}
+
+/*--------------------------------------
+	5-4.グローバルナビへの処理
+---------------------------------------*/
+body.eye-t div#header ul#globalNavi {
+	margin-top: 10px;
+}
+
+/*======================================
+
+	Global Navigation Module
+	
+=======================================*/
+
+/*--------------------------------------
+	1.Structure
+---------------------------------------*/
+
+ul#globalNavi {
+	margin: 0.1em 5px -2px; /* 出現時にheaderの下の余白を詰める */
+	padding: 0.2em 0 0 0;
+	background-image: url(images/interface/bg_break01.gif);
+	background-position: left 0.3em;
+	background-repeat: no-repeat;
+}
+
+ul#globalNavi li {
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 9em;
+	background-image: url(images/interface/bg_break01.gif);
+	background-position: right 0.1em;
+	background-repeat: no-repeat;
+	list-style-type: none;
+}
+body.eye-s ul#globalNavi li,
+body.eye-d ul#globalNavi li,
+body.eye-t ul#globalNavi li {
+	width: 8.5em;
+}
+
+/*--------------------------------------
+	2.ボタン通常時
+---------------------------------------*/
+
+ul#globalNavi li a {
+	margin: 0 1px;
+	padding: 0.3em 0.5em; /* ボタンの厚みはここで調整 */
+	border: none;
+	display: block;
+	position: relative; /* IE6でマウス反応領域がおかしいのをFix */
+	line-height: 1;
+	font-size: 77%;
+	color: #a0c9dd;
+	text-align: center;
+	text-decoration: none;
+}
+
+/*--------------------------------------
+	3.ボタン反応時
+---------------------------------------*/
+
+ul#globalNavi li a:hover {
+	color: #fff;
+	background-color: #000;
+}
+
+/*======================================
+
+	Calendar Style Module
+	
+=======================================*/
+
+/*--------------------------------------
+	1.Structure
+---------------------------------------*/
+
+div#utilities dl dd table.calendar {
+	margin: 0.3em 0 0.3em 8px;
+	font-size: 85%;
+	border: none;
+	width: 300px;
+	border-top: 1px solid #111;
+	border-left: 1px solid #111;
+	vertical-align: middle;
+}
+
+body.double div#utilities dl dd table.calendar {
+	margin: 0.3em 0 0.3em 15px;
+	width:200px;
+}
+
+/*--------------------------------------
+	2.前後の月へのリンク
+---------------------------------------*/
+
+div#utilities dl dd table.calendar caption {
+	color: #ccc;
+}
+
+body.double div#utilities dl dd table.calendar caption {
+
+}
+
+div#utilities dl dd table.calendar caption a {
+	padding: 0 5px;
+	height: 1px;
+	color: #ccc;
+	background-color: #222;
+	font-weight: bold;
+	text-decoration: none;
+	outline: none;
+}
+
+div#utilities dl dd table.calendar caption a:hover {
+	color: #fff;
+	background-color: #000;
+}
+
+/*--------------------------------------
+	3.セル
+---------------------------------------*/
+
+div#utilities dl dd table.calendar th,
+div#utilities dl dd table.calendar td {
+	padding: 0;
+	border: none;
+	line-height: 20px;
+	border-right: 1px solid #111;
+	border-bottom: 1px solid #111;
+	text-align: center;
+	vertical-align: middle;
+}
+
+div#utilities dl dd table.calendar th {
+	color: #fff;
+	background-color: #333;
+	background-image: url(images/common/grad01.gif);
+	background-repeat: repeat-x;
+}
+
+div#utilities dl dd table.calendar td {
+}
+
+/*--------------------------------------
+	4.土日
+---------------------------------------*/
+
+div#utilities dl dd table.calendar th.sun {
+	color: #fff;
+	background-color: #333;
+	background-image: url(images/common/grad02.gif);
+	background-repeat: repeat-x;
+}
+
+div#utilities dl dd table.calendar th.sat {
+	color: #fff;
+	background-color: #333;
+	background-image: url(images/common/grad02.gif);
+	background-repeat: repeat-x;
+}
+
+/*--------------------------------------
+	5.セル内のリンク
+---------------------------------------*/
+
+div#utilities dl dd table.calendar td a {
+	display: block;
+	line-height: 2;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+div#utilities dl dd table.calendar td a:link {
+	color: #fff;
+	background-image: url(images/common/circle01.gif);
+}
+
+div#utilities dl dd table.calendar td a:visited {
+	color: #999;
+	background-image: url(images/common/circle02.gif);
+}
+
+div#utilities dl dd table.calendar td a:hover {
+	color: #000;
+	background-image: url(images/common/circle03.gif);
+}

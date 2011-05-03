@@ -1,0 +1,322 @@
+@charset "utf-8";
+
+/*
+*	※Licence: CC3.0 
+*	http://creativecommons.org/licenses/by/3.0/deed.ja
+*
+*	Title: Warship - Class
+*	URI: http://vicuna.jp/
+*	Last Modified: 2007-11-1
+*	Author: wu
+*/
+
+/*--------------------------------------
+	.pager
+---------------------------------------*/
+
+/*	ul.pager (Newer|Older)
+-----------------------------*/
+
+ul.pager {
+	text-align: center;
+}
+
+ul.pager li {
+	display: inline;
+}
+
+ul.pager li.newer:before {
+	content: "<< ";
+}
+
+ul.pager li.older:after {
+	content: " >>";
+}
+
+/*	p.pagerNum (1|2|3|4)
+-----------------------------*/
+
+p.pagerNum {
+	text-align: center;
+}
+
+p.pagerNum a {
+	text-decoration: none;
+	border-bottom: none;
+}
+
+p.pagerNum strong {
+
+}
+
+/*--------------------------------------
+	.count
+---------------------------------------*/
+
+.count {
+	color: #fff;
+}
+
+/*--------------------------------------
+	.feed
+---------------------------------------*/
+
+li.atom,
+li.rss {
+	list-style-type: none;
+}
+
+li.atom a,
+li.rss a {
+	padding-left: 20px;
+	background-image: url(images/icon/icon_feed.gif);
+	background-repeat: no-repeat;
+	background-position: 0 center;
+}
+
+li.atom a:hover,
+li.rss a:hover {
+	background-image: url(images/icon/icon_feed.gif);
+}
+
+/*--------------------------------------
+	dl.data
+---------------------------------------*/
+
+dl.data {
+	padding: 0;
+	border-left: 5px solid #000!important;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000!important;
+}
+
+dl.data dt {
+	margin: 0;
+	padding: 0.3em 0 0.1em 1em;
+	border-top: 1px solid #000;
+	width: 8em;
+	float: left;
+}
+	
+dl.data dd {
+	margin: 0 0 0 8em;
+	padding: 0.3em 1em;
+	border-left: 1px solid #000;
+	border-top: 1px solid #000;
+	color: #c2cfd2;
+}
+
+/*--------------------------------------
+	float
+---------------------------------------*/
+
+.img_L {
+	margin-right: 1em!important;
+	margin-top: 1em!important;
+	float: left;
+	display: inline;
+}
+
+.img_R {
+	margin-left: 1em!important;
+	margin-top: 1em!important;
+	float: right;
+	display: inline;
+}
+
+.clear {
+	display: block;
+	clear: both;
+	line-height: 0;
+}
+
+/*--------------------------------------
+	.admin
+---------------------------------------*/
+
+.admin a {
+	padding: 0 10px 0 25px;
+	text-decoration: none;
+	color: #f65472;
+	background: url(images/icon/icon_edit.gif) 5px 3px no-repeat;
+}
+
+.admin a:hover {
+	color: #953844;
+}
+
+/*--------------------------------------
+	Photo thumbnail
+---------------------------------------*/
+
+ul.thumb {
+	overflow: auto;
+}
+
+ul.thumb li {
+	margin: 5px 0 0 5px;
+	border: 1px solid #000;
+	float: left;
+	display: inline;
+	overflow: hidden;
+	width: 70px; /* Pictures height */
+	background-color: #666;
+}
+
+ul.thumb li a {
+	border: none;
+	text-decoration: none;
+}
+
+ul.thumb li a img {
+	border: none;
+}
+
+/*--------------------------------------
+	Tag Cloud
+---------------------------------------*/
+
+ul.tagCloud {
+	margin: 0.5em 20px;
+	padding: 0.5em 10px;
+	line-height: 1;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	text-align: center;
+}
+
+ul.tagCloud li {
+	margin: 0;
+	padding: 0;
+	display: inline;
+	font-size: 100%;
+}
+
+ul.tagCloud li a {
+	text-decoration: none;
+}
+
+/* Tag level 1>6 */
+
+ul.tagCloud li.level1 a {
+	font-size: 167%;
+	font-weight: bold;
+}
+
+ul.tagCloud li.level2 a {
+	font-size: 136%;
+	font-weight: bold;
+}
+
+ul.tagCloud li.level3 a {
+	font-size: 122%;
+	font-weight: bold;
+}
+
+ul.tagCloud li.level4 a {
+	font-size: 114%;
+}
+
+ul.tagCloud li.level5 a {
+	font-size: 92%;
+}
+
+ul.tagCloud li.level6 a {
+	font-size: 77%;
+}
+
+/* On Mouse */
+ul.tagCloud li a:hover {
+	color: #fff;
+}
+
+/*--------------------------------------
+	Headline
+---------------------------------------*/
+
+dl.headline {
+	margin: 0 20px 1em;
+}
+
+dl.headline dt {
+	font-size: 114%;
+	margin-bottom: 0;
+}
+
+dl.headline dt span.date {
+	font-size: 77%;
+	color: #aaa;
+}
+
+dl.headline dd {
+	margin: 0 10px 1em 10px;
+}
+
+dl.headline dd ul {
+	margin: 0;
+	padding-bottom: 1.2em;
+	list-style-type: none;
+	list-style-position: outside;
+	border-bottom: 1px solid #000;
+}
+
+dl.headline dd ul li {
+	margin: 0.3em 5px 0.3em 0;
+	display: inline;
+	font-size: 92%;
+	color: #fff;
+}
+
+dl.headline dd ul li.author span.name {
+	color: #aaa;
+}
+
+dl.headline dd ul li.category a,
+dl.headline dd ul li.tag a {
+	color: #aaa;
+	text-decoration: none;
+}
+
+dl.headline dd ul li.tag a {
+
+}
+
+dl.headline dd ul li.textBody {
+	display: block;
+	font-size: 100%;
+	color: #fff;
+}
+
+/*--------------------------------------
+	clearFix
+---------------------------------------*/
+
+ul#globalNavi,
+div#utilities,
+.textBody,
+.entry,
+ul.flip {
+	_height: 1px;
+	min-height: 1px;
+}
+
+ul#globalNavi:after,
+div#utilities:after,
+.textBody:after,
+ul.flip:after {
+	height: 0;
+	visibility: hidden;
+	content: ".";
+	display: block;
+	clear: both;
+}
+
+/* for MacIE5 \*//*/
+ul#globalNavi,
+div#utilities,
+.textBody,
+ul.flip {
+	height: auto;
+	overflow: hidden;
+}
+/* end */
